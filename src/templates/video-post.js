@@ -26,6 +26,10 @@ const Speaker = styled.h3`
   color:#CCC;
 `;
 
+const StyledTags = styled(Tags)`
+  margin-top:1em;
+`
+
 class VideoPost extends Component {
 
     render() {
@@ -47,8 +51,9 @@ class VideoPost extends Component {
                 <Speaker>{video.speaker.name}</Speaker>
                 <VideoTitle>{video.name}</VideoTitle>
 
-                {video.description.map(paragraph => <p>{paragraph}</p>)}
-                <Tags tags={video.tags} />
+                {video.description}
+
+                <StyledTags tags={video.tags} />
               </Box>
               <Box width={1/4}>
                 <Playlist playlist={playlist} />

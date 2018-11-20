@@ -16,19 +16,15 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-emotion',
     {
-      resolve: 'gatsby-source-prismic',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        repositoryName: 'gatsby-starter-portfolio-bella',
-        accessToken: `${process.env.API_KEY}`,
-        linkResolver: ({ node, key, value }) => doc => `/${doc.uid}`,
-        htmlSerializer: ({ node, key, value }) => (type, element, content, children) => {
-          // Your HTML serializer
-        },
+        name: `videos`,
+        path: `./videos/`,
       },
     },
+    'gatsby-transformer-json',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-lodash',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
@@ -62,6 +58,5 @@ module.exports = {
     },
     /* Must be placed at the end */
     'gatsby-plugin-offline',
-    'gatsby-plugin-netlify',
   ],
 };

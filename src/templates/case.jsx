@@ -120,35 +120,35 @@ CaseTemplate.propTypes = {
   }).isRequired,
 };
 
-export const pageQuery = graphql`
-  query CaseBySlug($uid: String!) {
-    prismicCaseStudy(uid: { eq: $uid }) {
-      uid
-      first_publication_date
-      last_publication_date
-      data {
-        header_image {
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 1920, quality: 90, traceSVG: { color: "#021212" }) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-              }
-              resize(width: 800) {
-                src
-              }
-            }
-          }
-        }
-        title {
-          text
-        }
-        subtitle {
-          text
-        }
-        content {
-          html
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query CaseBySlug($uid: String!) {
+//     prismicCaseStudy(uid: { eq: $uid }) {
+//       uid
+//       first_publication_date
+//       last_publication_date
+//       data {
+//         header_image {
+//           localFile {
+//             childImageSharp {
+//               fluid(maxWidth: 1920, quality: 90, traceSVG: { color: "#021212" }) {
+//                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
+//               }
+//               resize(width: 800) {
+//                 src
+//               }
+//             }
+//           }
+//         }
+//         title {
+//           text
+//         }
+//         subtitle {
+//           text
+//         }
+//         content {
+//           html
+//         }
+//       }
+//     }
+//   }
+// `;

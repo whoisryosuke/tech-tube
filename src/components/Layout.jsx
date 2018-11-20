@@ -6,6 +6,7 @@ import { injectGlobal } from 'react-emotion';
 import { ThemeProvider } from 'emotion-theming';
 
 import SEO from './SEO';
+import Header from './Header/Header';
 import theme from '../../config/theme';
 
 injectGlobal`
@@ -18,9 +19,9 @@ injectGlobal`
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    h1, h2, h3, h4, h5, h6 {
-      color: ${theme.colors.primary};
-    }
+  }
+  body {
+    padding-top:3em;
   }
   @media (max-width: ${theme.breakpoint.m}), (max-device-width: ${theme.breakpoint.m}) {
     html {
@@ -94,6 +95,7 @@ const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <React.Fragment>
       <SEO />
+      <Header />
       {children}
     </React.Fragment>
   </ThemeProvider>

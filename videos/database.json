@@ -1,0 +1,33 @@
+[{
+    "name": "Jeremy Edberg - Scalable Cloud Architectures | Tech Talk",
+    "video": "cCAO9moDucI",
+    "service": "youtube",
+    "speaker": {
+      "name": "Jeremy Edberg",
+      "website": "https://twitter.com/jedberg"
+    },
+    "date": "10/26/2012",
+    "tags": [
+      "cloud",
+      "devops"
+    ],
+    "description": "Battle-hardened from running Reddit's infrastructure for four years, Jeremy Edberg (jedberg in most corners of the internet) brings to Airbnb a detailed and comprehensive take on scaling reliable cloud systems using AWS and other web platforms. Now at Netflix as Lead Reliability Engineer, Jeremy will share his learnings and stories from the last five years on building and maintaing large scale systems in the cloud."
+  },
+  {
+    "name": "Develop a Quiz App with Javascript - Object Oriented Programming",
+    "video": "jvk1pFNqXaw",
+    "service": "youtube",
+    "cover_image": "http://img.youtube.com/vi/jvk1pFNqXaw/sddefault.jpg",
+    "length": "3487",
+    "speaker": {
+      "name": "Awais Mirza",
+      "website": "https://twitter.com/AwaisMirza01"
+    },
+    "date": "08/23/2016",
+    "tags": [
+      "javascript",
+      "oop"
+    ],
+    "description": "In this JavaScript object oriented programming tutorial, you will learn how to make a complete quiz application for web. You will learn, how to design models and controllers for different functionalities with in the app. Plus you will learn how to design the interface  of our app with html and css."
+  }
+]

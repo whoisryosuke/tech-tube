@@ -5,11 +5,10 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.45,
   headerFontFamily: [
-    'Bree Serif',
+    'Roboto',
     '-apple-system',
     'BlinkMacSystemFont',
     'Segoe UI',
-    'Roboto',
     'Helvetica',
     'Arial',
     'sans-serif',
@@ -18,11 +17,10 @@ const typography = new Typography({
     'Segoe UI Symbol',
   ],
   bodyFontFamily: [
-    'Open Sans',
+    'Roboto',
     '-apple-system',
     'BlinkMacSystemFont',
     'Segoe UI',
-    'Roboto',
     'Helvetica',
     'Arial',
     'sans-serif',
@@ -32,12 +30,8 @@ const typography = new Typography({
   ],
   googleFonts: [
     {
-      name: 'Bree Serif',
-      styles: ['400'],
-    },
-    {
-      name: 'Open Sans',
-      styles: ['400'],
+      name: 'Roboto',
+      styles: ['400', '700'],
     },
   ],
   scaleRatio: 3.998,
@@ -47,6 +41,6 @@ const typography = new Typography({
       marginBottom: 0,
     },
   }),
-});
+})
 
 export default typography;

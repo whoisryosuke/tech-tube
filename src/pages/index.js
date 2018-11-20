@@ -13,7 +13,6 @@ const Wrapper = styled(Box)`
   padding: 1em;
   margin-top: 48px;
   min-height: calc(100vh);
-  background-color: #efefef;
   margin:auto;
 `
 
@@ -51,7 +50,6 @@ const IndexPage = ({
               </p>
             </PaddedBox>
           </FeaturedPost>
-          <hr />
           <h4>Latest talks</h4>
           <Flex>{loop}</Flex>
         </Wrapper>

@@ -13,16 +13,7 @@ const Wrapper = styled(Box)`
   padding: 1em;
   margin-top: 48px;
   min-height: calc(100vh);
-  background-color: #efefef;
   margin:auto;
-`
-
-const FeaturedPost = styled(Flex)`
-
-`
-
-const PaddedBox = styled(Box)`
-  padding:1em;
 `
 
 const TagCloud = styled.ul`
@@ -46,34 +37,7 @@ const TagCloud = styled.ul`
   }
 `
 
-
-const Sidebar = styled(Box)`
-  height: 100%;
-  max-height: 100%;
-  top: 48px;
-  left: 0;
-  margin: 0 !important;
-  padding-top: 1em;
-  background: #fff;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  will-change: transform;
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  z-index: 5;
-
-  &.hidden {
-    -webkit-transform: translateX(-250px);
-    transform: translateX(-250px);
-  }
-`
-
-const Menu = styled.ul`
-  list-style:none;
+const Menu = styled.nav`
   
   li {
 
@@ -92,15 +56,14 @@ const CategoriesPage = ({
     <Wrapper width={6 / 6, 5/6, 7/8}>
 
       <Menu>
-        <li>Tags
-                <ul>
+      <h2>Categories:</h2>
+          <ul>
             {tags.group.map(tag => <li key={tag.fieldValue}>
               <Link to={`/tag/${kebabCase(tag.fieldValue)}/`}>
                 {tag.fieldValue} ({tag.totalCount})
                         </Link>
             </li>)}
           </ul>
-        </li>
       </Menu>
         </Wrapper>
     </Layout >};

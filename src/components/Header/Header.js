@@ -12,10 +12,27 @@ const AppBar = styled.div`
   top:0;
   left:0;
   padding:0.75em;
+  display:flex;
+  justify-content:space-between;
 `
 
 const Logo = styled.h1`
-  font-size:1em;
+  font-size: 1em;
+
+  a {
+    color: #000;
+  }
+
+  a:hover {
+    color: #cc2029;
+  }
+`
+
+const Menu = styled.nav`
+  a {
+    font-size:0.8em;
+    margin-right:1em;
+  }
 `
 
 class Header extends React.Component {
@@ -43,6 +60,10 @@ class Header extends React.Component {
           <Logo>
             <Link to="/">Tech Tube</Link>
           </Logo>
+          <Menu>
+            <Link to="/categories">Categories</Link>
+            <Link to="/speakers">Speakers</Link>
+          </Menu>
         </AppBar>
         {/* <HeaderMenu open={open} onClose={this.toggleDrawer} categories={categories} /> */}
       </React.Fragment>

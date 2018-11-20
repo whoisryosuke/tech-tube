@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import styled from 'react-emotion'
 
 const styles = theme => ({
   root: {
@@ -37,18 +38,32 @@ const styles = theme => ({
   },
 })
 
+const Figure = styled.figure`
+  margin-bottom:1em;
+`
+const PlaylistLink = styled(Link)`
+  display:flex;
+  
+  figure {
+    min-width:150px;
+    margin-right:1em;
+  }
+
+  figure img {
+    width:100%;
+  }
+`
+
 const Playlist = ({ classes, playlist }) => {
   const videos = playlist.edges.map(video => (
-    <Link to={video.node.fields.slug}>
+    <PlaylistLink to={video.node.fields.slug}>
       <figure>
         <img
           src={`https://img.youtube.com/vi/${video.node.video}/1.jpg`}
         />
       </figure>
-      <div>
-        <h4>{video.node.name}</h4>
-      </div>
-    </Link>
+      <h4>{video.node.name}</h4>
+    </PlaylistLink>
   ))
   return (
     <nav>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
+import styled from 'react-emotion'
 
 
 const styles = theme => ({
@@ -12,7 +13,8 @@ const styles = theme => ({
   }
 })
 
-const Tags = ({ tags }) => {
+
+const Tags = ({ className, tags }) => {
 
   const loop = tags.map(tag =>
     <Link to={`tag/${tag}`}>
@@ -20,7 +22,8 @@ const Tags = ({ tags }) => {
     </Link>)
 
   return (
-    <nav className="Tags">
+    <nav className={className}>
+      <h4>Categories: </h4> 
       { loop }
     </nav>
   )
@@ -30,4 +33,11 @@ Tags.propTypes = {
   tag: PropTypes.array.isRequried
 }
 
-export default Tags
+const StyledTags = styled(Tags)`
+  h4, a {
+    margin-right: 1em;
+    display: inline-block;
+  }
+`
+
+export default StyledTags

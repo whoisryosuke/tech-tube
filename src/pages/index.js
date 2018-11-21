@@ -50,7 +50,7 @@ const IndexPage = ({
               </p>
             </PaddedBox>
           </FeaturedPost>
-          <h4>Latest talks</h4>
+          <h2>Latest talks</h2>
           <Flex>{loop}</Flex>
         </Wrapper>
     </Layout>};
@@ -69,7 +69,7 @@ export const query = graphql`
   query IndexQuery {
     videos: allDatabaseJson(
       sort: {fields: [date], order: DESC}, 
-      limit: 3
+      limit: 4
     ) {
       totalCount
       edges {

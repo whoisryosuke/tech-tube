@@ -17,8 +17,6 @@
     "name": "Develop a Quiz App with Javascript - Object Oriented Programming",
     "video": "jvk1pFNqXaw",
     "service": "youtube",
-    "cover_image": "http://img.youtube.com/vi/jvk1pFNqXaw/sddefault.jpg",
-    "length": "3487",
     "speaker": {
       "name": "Awais Mirza",
       "website": "https://twitter.com/AwaisMirza01"
@@ -29,5 +27,82 @@
       "oop"
     ],
     "description": "In this JavaScript object oriented programming tutorial, you will learn how to make a complete quiz application for web. You will learn, how to design models and controllers for different functionalities with in the app. Plus you will learn how to design the interface  of our app with html and css."
-  }
+  },
+  {
+    "name": "Making Night in the Woods Better with Open Source",
+    "video": "Qsiu-zzDYww",
+    "service": "youtube",
+    "speaker": {
+      "name": "Jon Manning",
+      "website": "https://http://twitter.com/desplesda"
+    },
+    "date": "04/14/2017",
+    "tags": [
+      "open source",
+    ],
+    "description": "In this 2017 GDC session, Secret Labs' Jon Manning explains how Night in the Woods open-sourced Yarn, the dialogue system managing all of the text in the game, in the middle of production. Manning discusses how the community took Yarn over, made it better, and improved the life of the development team as a result."
+  },
+  {
+    "name": "SPAN Tokyo 2016: Livestream",
+    "video": "AG0zqUt01Kg",
+    "service": "youtube",
+    "speaker": {
+      "name": "Various",
+      "website": "#"
+    },
+    "date": "04/14/2017",
+    "tags": [
+      "livestream",
+      "japan",
+      "material design",
+    ],
+    "description": "Welcome to #SPAN16, Google Design's annual conference exploring the connections between, and the conversations around design and technology."
+  },
+  {
+    "name": "Immutable data structures for functional JS | JSConf EU",
+    "video": "Wo0qiGPSV-s",
+    "service": "youtube",
+    "speaker": {
+      "name": "Anjana Vakil",
+      "website": "http://twitter.com/AnjanaVakil"
+    },
+    "date": "05/14/2017",
+    "tags": [
+      "jsconf",
+      "javascript",
+      "functional programming",
+    ],
+    "description": "In this talk we’ll take a look at how these data structures work, why they’re fantastic for functional programming, and how we can easily use them in our JS code thanks to libraries like Mori and Immutable.js."
+  },
+  {
+    "name": "GOTO 2017 • Programming Across Paradigms",
+    "video": "Pg3UeB-5FdA",
+    "service": "youtube",
+    "speaker": {
+      "name": "Anjana Vakil",
+      "website": "http://twitter.com/AnjanaVakil"
+    },
+    "date": "05/14/2017",
+    "tags": [
+      "goto",
+      "javascript",
+      "functional programming",
+    ],
+    "description": "What's in a programming paradigm? How did the major paradigms come to be, and why? Once we've sworn our love to one paradigm, does a program written under any other still smell as sweet? Can functional programmers learn anything from..."
+  },
+  {
+    "name": "Creating UX that “Just Feels Right” with Progressive Web Apps (Google I/O '17)",
+    "video": "mmq-KVeO-uU",
+    "service": "youtube",
+    "speaker": {
+      "name": "Various",
+      "website": "#"
+    },
+    "date": "05/14/2017",
+    "tags": [
+      "google",
+      "ux",
+    ],
+    "description": "On mobile, a seamless user experience can be the difference between success or failure for a product. In this talk, Mustafa and Owen will share the secrets to creating UX on the web that “just feels right” in the way users have come to expect. You'll see some real world examples of how this is done right, as well as get UX Principles that cover slick transitions, handling network failures, increasing conversions and much more."
+  },
 ]

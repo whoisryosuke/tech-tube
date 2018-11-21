@@ -38,9 +38,11 @@ const VideoCard = ({ video }) => {
   let postDate = new Date(video.node.date);
   return <Card>
     <figure>
-      <img
-        src={`https://img.youtube.com/vi/${video.node.video}/0.jpg`}
-      />
+      <Link to={`/v/${video.node.fields.slug}`}>
+        <img
+          src={`https://img.youtube.com/vi/${video.node.video}/0.jpg`}
+        />
+      </Link>
     </figure>
 
         <VideoTitle>

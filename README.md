@@ -7,6 +7,7 @@ A video directory for developer and design talks using GatsbyJS, ReactJS, Emotio
 Fork this repo and send a pull request with your video added to `database.json`. 
 
 - If the video contains more than one speaker, the speaker name is "Various" and website is "#".
+- Git commits are prefixed with Github emoji (e.g. `:movie_camera: Adding videos`)
 
 > Make sure to follow the formatting exactly (e.g. `04/20/2020` date format is strict).
 

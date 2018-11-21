@@ -31,7 +31,7 @@ const SpeakersPage = ({ data: { tags } }) => {
           <ul>
             {tags.group.map(tag => (
               <li key={tag.fieldValue}>
-                <Link to={`/tag/${kebabCase(tag.fieldValue)}/`}>
+                <Link to={`/speaker/${kebabCase(tag.fieldValue)}/`}>
                   {tag.fieldValue} ({tag.totalCount})
                 </Link>
               </li>

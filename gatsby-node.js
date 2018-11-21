@@ -71,15 +71,20 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
        * Create archive pages for tags
        */
         let tags = []
+        let speakers = []
       // Iterate through each post, putting all found tags into `tags`
         result.data.allDatabaseJson.edges.forEach(({ node }) => {
           if ('tags' in node) {
             tags = tags.concat(node.tags)
           }
+          if ('speaker' in node) {
+            speakers = speakers.concat(node.speaker.name)
+          }
         })
 
       // Eliminate duplicate tags
       tags = tags.filter(function (item, i, ar) { return ar.indexOf(item) === i; });
+      speakers = speakers.filter(function (item, i, ar) { return ar.indexOf(item) === i; });
 
       // Make tag pages 
       tags.forEach(tag => {
@@ -89,6 +94,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               component: path.resolve(`./src/templates/tag-archive.js`),
               context: {
                   tag: tag,
+              },
+          });
+      });
+
+      // Make speaker pages 
+      speakers.forEach(speaker => {
+          let speakerName = speaker.replace(/\s+/g, '-').toLowerCase();
+          createPage({
+              path: `/speaker/${speakerName}/`,
+              component: path.resolve(`./src/templates/speaker-archive.js`),
+              context: {
+                  speaker: speaker,
               },
           });
       });

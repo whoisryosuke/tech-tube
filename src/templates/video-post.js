@@ -74,7 +74,6 @@ export const query = graphql`
         video
         service
         description
-        length
         speaker {
             name
             website
@@ -92,7 +91,6 @@ export const query = graphql`
           name
           service
           video
-          length
           speaker{
             name
             website

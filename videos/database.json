@@ -38,7 +38,7 @@
     },
     "date": "04/14/2017",
     "tags": [
-      "open source",
+      "open source"
     ],
     "description": "In this 2017 GDC session, Secret Labs' Jon Manning explains how Night in the Woods open-sourced Yarn, the dialogue system managing all of the text in the game, in the middle of production. Manning discusses how the community took Yarn over, made it better, and improved the life of the development team as a result."
   },
@@ -54,7 +54,7 @@
     "tags": [
       "livestream",
       "japan",
-      "material design",
+      "material design"
     ],
     "description": "Welcome to #SPAN16, Google Design's annual conference exploring the connections between, and the conversations around design and technology."
   },
@@ -70,7 +70,7 @@
     "tags": [
       "jsconf",
       "javascript",
-      "functional programming",
+      "functional programming"
     ],
     "description": "In this talk we’ll take a look at how these data structures work, why they’re fantastic for functional programming, and how we can easily use them in our JS code thanks to libraries like Mori and Immutable.js."
   },
@@ -86,7 +86,7 @@
     "tags": [
       "goto",
       "javascript",
-      "functional programming",
+      "functional programming"
     ],
     "description": "What's in a programming paradigm? How did the major paradigms come to be, and why? Once we've sworn our love to one paradigm, does a program written under any other still smell as sweet? Can functional programmers learn anything from..."
   },
@@ -101,8 +101,8 @@
     "date": "05/14/2017",
     "tags": [
       "google",
-      "ux",
+      "ux"
     ],
     "description": "On mobile, a seamless user experience can be the difference between success or failure for a product. In this talk, Mustafa and Owen will share the secrets to creating UX on the web that “just feels right” in the way users have come to expect. You'll see some real world examples of how this is done right, as well as get UX Principles that cover slick transitions, handling network failures, increasing conversions and much more."
-  },
+  }
 ]

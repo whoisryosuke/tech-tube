@@ -14,6 +14,7 @@ const AppBar = styled.div`
   padding:0.75em;
   display:flex;
   justify-content:space-between;
+  background:#FFF;
 `
 
 const Logo = styled.h1`

@@ -6,6 +6,7 @@ import { Flex, Box } from '@rebass/grid/emotion'
 import Layout from '../components/Layout';
 import VideoCard from '../components/VideoCard/VideoCard'
 import VideoEmbed from '../components/VideoEmbed/VideoEmbed'
+import LastVideo from '../components/LastVideo/LastVideo'
 
 import kebabCase from 'lodash/kebabCase'
 
@@ -53,6 +54,7 @@ const IndexPage = ({
           <h2>Latest talks</h2>
           <Flex>{loop}</Flex>
         </Wrapper>
+        <LastVideo />
     </Layout>};
 
 export default IndexPage;

@@ -32,6 +32,20 @@ const StyledTags = styled(Tags)`
 
 class VideoPost extends Component {
 
+    componentDidMount() {
+      const { video } = this.props.data
+
+      if(video) {
+        const videoCache = {
+          slug: video.fields.slug,
+          name: video.name,
+          video: video.video,
+          service: video.service
+        }
+        localStorage.setItem('techtube-last-video', JSON.stringify(videoCache))
+      }
+    }
+
     render() {
 
         const { video, playlist } = this.props.data;
@@ -70,6 +84,7 @@ VideoPost.propTypes = {
 export const query = graphql`
   query VideoPostQuery($slug: String!) {
     video: databaseJson(fields: { slug: { eq: $slug } }) {
+        id
         name
         video
         service
@@ -77,6 +92,9 @@ export const query = graphql`
         speaker {
             name
             website
+        }
+        fields {
+          slug
         }
         tags
         date

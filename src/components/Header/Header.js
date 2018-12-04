@@ -64,6 +64,7 @@ class Header extends React.Component {
           <Menu>
             <Link to="/categories">Categories</Link>
             <Link to="/speakers">Speakers</Link>
+            <Link to="/watchlater">Watch Later</Link>
           </Menu>
         </AppBar>
         {/* <HeaderMenu open={open} onClose={this.toggleDrawer} categories={categories} /> */}

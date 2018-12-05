@@ -39,7 +39,18 @@ Static pages are stored in `/pages/`.
 
 ### High Priority
 
+- [] Mobile friendly design
 - [] Make Speakers an array in `database.json` (allowing for multiple speakers).
 - [] Fill in website with more content
+- [] Add link to contribute + guide on how to contribute
+- [] Add link to Github + Github logo SVG
 
 ### Low Priority
+
+- [] Search box (maybe using Algolia?)
+- [] Add share links (Twitter, Facebook, etc)
+- [] Make website SEO friendly (add meta tags to head)
+- [] Link featured video title to single video page
+- [] Add functionality for Vimeo video thumbnails in VideoCard and Embed components
+- [✅] Watch Later functionality using localStorage cache
+- [✅] Button to hide "Recently Watched" window

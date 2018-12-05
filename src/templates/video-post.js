@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import { Flex, Box } from '@rebass/grid/emotion'
-import { graphql, Link } from "gatsby";
+import { graphql, Link, navigate } from "gatsby";
 import Img from "gatsby-image";
 import styled from 'react-emotion'
 import kebabCase from 'lodash/kebabCase'
 import nicetime from '../utils/nicetime';
 import Layout from '../components/Layout'
+import watchLater from '../utils/watchLater'
 
 import VideoEmbed from '../components/VideoEmbed/VideoEmbed'
 import VideoTime from '../components/VideoTime/VideoTime'
@@ -16,6 +17,16 @@ import Playlist from '../components/Playlist/Playlist'
 const Wrapper = styled(Flex)`
   max-width: ${props => props.theme.breakpoint.l};
   margin:auto;
+`
+const PaddedBox = styled(Box)`
+  padding:1em;
+`
+
+const WatchLaterButton = styled.button`
+  padding:1em;
+  border-radius:1em;
+  display:block;
+  margin:1em 0;
 `
 
 const VideoTitle = styled.h2`
@@ -29,6 +40,11 @@ const Speaker = styled.h3`
 const StyledTags = styled(Tags)`
   margin-top:1em;
 `
+
+const addToWatchLater = (slug, name, video, service) => {
+    watchLater(slug, name, video, service)
+    navigate('/watchlater')
+  }
 
 class VideoPost extends Component {
 
@@ -60,16 +76,27 @@ class VideoPost extends Component {
         let postDate = new Date(video.date);
       return <Layout>
             {embed}
-            <Wrapper>
-              <Box width={3/4}>
+            <Wrapper flexWrap="wrap">
+              <PaddedBox width={[1, 1, 1, 3/5]}>
                 <Speaker>{video.speaker.name}</Speaker>
                 <VideoTitle>{video.name}</VideoTitle>
 
                 {video.description}
 
                 <StyledTags tags={video.tags} />
-              </Box>
-              <Box width={1/4}>
+
+                <WatchLaterButton
+                  onClick={() =>
+                    addToWatchLater(
+                      video.fields.slug,
+                      video.name,
+                      video.video,
+                      video.service
+                    )
+                  }
+                >Watch Later</WatchLaterButton>
+              </PaddedBox>
+              <Box width={[1, 1, 1, 2/5]}>
                 <Playlist playlist={playlist} />
               </Box>
             </Wrapper>

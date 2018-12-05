@@ -56,7 +56,7 @@ const PlaylistLink = styled(Link)`
 
 const Playlist = ({ classes, playlist }) => {
   const videos = playlist.edges.map(video => (
-    <PlaylistLink to={video.node.fields.slug}>
+    <PlaylistLink to={`/v/${video.node.fields.slug}`}>
       <figure>
         <img
           src={`https://img.youtube.com/vi/${video.node.video}/1.jpg`}

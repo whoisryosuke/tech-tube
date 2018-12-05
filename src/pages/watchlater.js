@@ -19,15 +19,15 @@ const Wrapper = styled(Box)`
 
 const WatchLaterPage = () => {
 
-  let videos
+  let videos = <p style={{color: '#777'}}>Add videos to your Watch Later by clicking the <button style={{padding: '0.5em', borderRadius: '0.5em'}}>WatchLater</button> button on the video page, or hovering over video thumbnails and clicking the plus sign.</p>
   // Grab cache
   const videoCache = localStorage.getItem('techtube-watch-later')
 
   if (videoCache) {
     // Parse cache, if it's valid array, map into VideoCards
-    videos = JSON.parse(videoCache)
-    if(videos && Array.isArray(videos)) {
-      videos = videos.map((video) => 
+    let videoList = JSON.parse(videoCache)
+    if (videoList && videoList.length > 0) {
+      videos = videoList.map((video) => 
          <VideoCard 
           edit={(() => deleteVideo(video.slug))}
           video={{
@@ -42,8 +42,6 @@ const WatchLaterPage = () => {
         }} />
       )
     }
-  } else {
-    videos = 'Add some videos to your watch later by clicking the Watch Later button on the video page, or hovering over video thumbnails and clicking the plus sign'
   }
 
   return <Layout>

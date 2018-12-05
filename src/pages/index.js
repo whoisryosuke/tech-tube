@@ -38,10 +38,10 @@ const IndexPage = ({
   const loop = latestPosts.map(video => <VideoCard key={video.node.name} video={video} />)
 
   return <Layout>
-        <Wrapper width={6/6, 5/6, 7/8}>
-          <FeaturedPost>
-            <Box width={3 / 4}>{featuredPostEmbed}</Box>
-            <PaddedBox width={1 / 4}>
+        <Wrapper width={[6/6, 5/6, 7/8]}>
+          <FeaturedPost flexWrap="wrap">
+            <Box width={[1, 1, 1, 3/4]}>{featuredPostEmbed}</Box>
+            <PaddedBox width={[1, 1, 1, 1/4]}>
               <h2>{featuredPost.node.name}</h2>
               <p>{featuredPostDescription}</p>
               <p>
@@ -52,7 +52,7 @@ const IndexPage = ({
             </PaddedBox>
           </FeaturedPost>
           <h2>Latest talks</h2>
-          <Flex>{loop}</Flex>
+      <Flex flexWrap="wrap">{loop}</Flex>
         </Wrapper>
         <LastVideo />
     </Layout>};
